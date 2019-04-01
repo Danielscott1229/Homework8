@@ -68,19 +68,28 @@ class Event {
 
 class SubscriberOdds implements Observer {
     public void notifyObserver(Event e) {
-
+        if (event.getData % 2 == true)
+            System.out.print("Event event.getNumber() is odd: event.getData()");
+        else
+            return false;
     }
 }
 
 class SubscriberEvens implements Observer {
     public void notifyObserver(Event e) {
-
+        if (event.getData % 2== true)
+            System.out.print("Event event.getNumber() is even: event.getData()");
+        else
+            return false;
     }
 }
 
 class SubscriberThrees implements Observer {
     public void notifyObserver(Event e) {
-
+        if (event.getData % 3 == true)
+            System.out.print("Event event.getNumber() is divisible by 3: event.getData()");
+        else
+            return false;
     }
 }
 
